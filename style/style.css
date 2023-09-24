@@ -25,9 +25,10 @@ body {
   padding: 32px 24px;
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 30px;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  overflow-x: hidden;
 }
 
 .title {
@@ -62,7 +63,7 @@ body {
   border: 1px solid #e7e7ec;
   border-radius: 100px;
   padding-right: 12px;
-  /* position: relative; */
+  /* position: relative; ---- не зрозуміла нащо */
 }
 
 .select__frame:focus-within {
@@ -84,37 +85,100 @@ body {
 
 .table {
   width: 100%;
-  /* border-spacing: 204px 0; */
+  /* border-spacing: 15.66%; ---- не працює */
 }
 
-/* td:nth-child(3) {
-  text-align: left;
-}
-
-td:nth-child(4) {
-  display: inline-block;
-  padding: 1px 10px 2px;
-  background-color: aqua;
-  border-radius: 100px;
-} */
-
-td {
-  padding: 15px 0;
-}
-
-.table__title {
+.table__heading {
   color: #b9c0c6;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.24px;
   text-transform: uppercase;
+  padding-top: 2px;
+  padding-bottom: 15px;
 }
 
-.tabe__row {
+.table__cell {
+  padding: 15px 0;
+  color: #29323f;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.28px;
+  white-space: nowrap;
+}
+
+.table__row {
   border-bottom: 1px solid #f0f2f4;
-  height: 47px;
 }
 
-.tabe__row:hover {
-  background-color: #f8f8f8;
+.table__row:hover {
+  background-color: #f0f2f4;
+}
+
+/* ----- ширина з відступами не працює. Колір фону для демонстрації реальної ширини  */
+
+.cell--first {
+  /* width: calc(4% + 2.4%); */
+  width: 4%;
+  text-align: right;
+  /* background-color: rgb(181, 221, 221); */
+  padding-left: 24px;
+}
+.cell--second {
+  /* width: calc(10.2% + 15.66%); */
+  width: 10.2%;
+  text-align: right;
+  /* background-color: rgb(128, 199, 199); */
+}
+.cell--third {
+  /* width: calc(9.2% + 15.66%); */
+  width: 9.2%;
+  text-align: left;
+  /* background-color: rgb(108, 142, 215); */
+}
+.cell--forth {
+  /* width: calc(5.37% + 15.66%); */
+  width: 5.37%;
+  text-align: center;
+  /* background-color: #b6a6e1; */
+}
+.cell--fifth {
+  /* width: calc(4.6% + 15.66%); */
+  width: 4.6%;
+  text-align: right;
+  /* background-color: #e4b3e2; */
+  padding-right: 27px;
+}
+
+.table__emptiness {
+  width: 15.6%;
+  min-width: 20px;
+}
+
+.status {
+  display: inline-flex;
+  justify-content: center;
+  text-transform: lowercase;
+  align-items: center;
+  line-height: 1;
+  height: 17px;
+  border-radius: 100px;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.24px;
+  color: black;
+}
+
+.status__success {
+  background-color: #d4fce4;
+  color: #129948;
+}
+.status__declined {
+  background-color: #f9e8e5;
+  color: #d12d09;
+}
+.status__pending {
+  background-color: #fcfad4;
+  color: #f09e00;
 }
