@@ -1,14 +1,25 @@
-* {
+/* COMMON */
+
+*,
+*::after,
+*::after {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
 }
 
 body,
 select {
   font-family: "Rubik", sans-serif;
 }
+
 body {
-  padding: 32px 16px;
+  padding: 3.2rem 1.6rem;
 }
+
+/* CONTAINER */
 
 .container {
   max-width: 1302px;
@@ -16,103 +27,193 @@ body {
   height: 100%;
   margin: 0 auto;
   border-radius: 8px;
-  box-shadow: 0 0 5px 0 #b5b5b5;
+  box-shadow: 0 0 20px 3px rgba(123, 123, 124, 0.2);
 }
 
+/* HEADER */
+
 .header {
-  padding: 32px 26px 0 24px;
+  padding: 3.2rem 2.4rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .title {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 1.4rem;
+  line-height: 114.286%;
   letter-spacing: 0.28px;
   text-transform: uppercase;
   color: #29323f;
-  margin-bottom: 47px;
 }
+
+/* FORM */
 
 .form {
   display: flex;
-  gap: 16px;
+  gap: 1.6rem;
   align-items: center;
-  margin-bottom: 34px;
 }
 
-.form__item {
+/* SELECT */
+
+.select {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.8rem;
 }
 
-.form__label {
+.select__label {
   color: #b9c0c6;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 0.24px;
 }
 
-.form__select {
-  /* width: 59px; */
-  height: 29px;
-  flex-shrink: 0;
-  border-radius: 100px;
+.select__frame {
   border: 1px solid #e7e7ec;
-  padding: 6px 2px 6px 12px;
-  /* background: #FFF; */
+  border-radius: 100px;
+  padding-right: 6px;
+  position: relative;
 }
 
-.form__option {
-  color: #29323f;
-  text-align: right;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0.28px;
+.select__frame:focus-within {
+  border-color: black;
+}
+
+.select__input {
+  height: 29px;
+  border-radius: 100px;
+  border: none;
+  padding-left: 12px;
+  outline: none;
+}
+
+.select__input:focus ~ .select__border {
+  border-color: black;
+}
+
+/* TABLE */
+
+.main {
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .table {
   width: 100%;
-  border-spacing: 204px 0;
-  text-align: right;
 }
 
-/* .table__align--left {
-  text-align: left;
-  padding: 15px 0;
-} */
-
-td:nth-child(3) {
-  text-align: left;
-  /* padding: 15px 0; */
+.table__col {
+  width: 20%;
 }
 
-td:nth-child(4) {
-  display: inline-block;
-  padding: 1px 10px 2px;
-  background-color: aqua;
-  border-radius: 100px;
+.table__col:nth-child(1) {
+  width: 4%;
+}
+.table__col:nth-child(2) {
+  width: 27%;
+}
+.table__col:nth-child(3) {
+  width: 38%;
+}
+.table__col:nth-child(4) {
+  width: 15%;
+}
+.table__col:nth-child(5) {
+  width: 16%;
 }
 
-td {
-  padding: 15px 0;
-}
-
-.table__title {
+.table__heading {
   color: #b9c0c6;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 0.24px;
   text-transform: uppercase;
+  text-align: left;
+  padding-top: 2px;
+  padding-bottom: 15px;
+}
+
+.table__cell {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.table__cell:not(:last-child) {
+  padding-right: 4.2rem;
+}
+
+.table__cell:nth-child(1) {
+  width: 52px;
+  padding-left: 2.4rem;
+}
+
+.table__cell:nth-child(2) {
+  width: 20%;
+}
+
+.table__cell:nth-child(3) {
+  padding-left: 13%;
+}
+
+.table__cell:nth-child(4) {
+  width: 80px;
+  padding-left: 3.2rem;
+}
+
+.table__cell:last-child {
+  padding-right: 2.4rem;
+}
+
+.table__cell--right {
+  text-align: right;
+}
+
+.table__data-cell {
+  padding: 1.5rem 0;
+  color: #29323f;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.28px;
 }
 
 .table__row {
   border-bottom: 1px solid #f0f2f4;
-  height: 47px;
 }
 
-.tabe__row:hover {
+.table__row:not(.table__row--head):hover {
   background-color: #f8f8f8;
+}
+
+/* STATUS */
+
+.status {
+  display: inline-flex;
+  justify-content: center;
+  text-transform: lowercase;
+  align-items: center;
+  line-height: 1;
+  height: 17px;
+  border-radius: 100px;
+  padding: 0 10px;
+  background-color: gray;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.24px;
+  color: black;
+}
+
+.status--success {
+  background-color: #d4fce4;
+  color: #129948;
+}
+.status--declined {
+  background-color: #f9e8e5;
+  color: #d12d09;
+}
+.status--pending {
+  background-color: #fcfad4;
+  color: #f09e00;
 }
