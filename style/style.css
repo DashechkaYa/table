@@ -105,6 +105,26 @@ body {
   width: 100%;
 }
 
+.table__col {
+  width: 20%;
+}
+
+.table__col:nth-child(1) {
+  width: 4%;
+}
+.table__col:nth-child(2) {
+  width: 27%;
+}
+.table__col:nth-child(3) {
+  width: 38%;
+}
+.table__col:nth-child(4) {
+  width: 15%;
+}
+.table__col:nth-child(5) {
+  width: 16%;
+}
+
 .table__heading {
   color: #b9c0c6;
   font-size: 1.2rem;
@@ -135,7 +155,7 @@ body {
 }
 
 .table__cell:nth-child(3) {
-  padding-left: 10%;
+  padding-left: 13%;
 }
 
 .table__cell:nth-child(4) {
