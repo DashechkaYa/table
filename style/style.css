@@ -5,7 +5,8 @@
 }
 
 body,
-select {
+select,
+input {
   font-family: "Rubik", sans-serif;
 }
 body {
@@ -76,6 +77,10 @@ body {
   border: none;
   padding-left: 12px;
   outline: none;
+  color: #29323f;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.28px;
 }
 
 .main {
@@ -139,7 +144,7 @@ body {
 .cell--forth {
   /* width: calc(5.37% + 15.66%); */
   width: 5.37%;
-  text-align: center;
+  text-align: left;
   /* background-color: #b6a6e1; */
 }
 .cell--fifth {
