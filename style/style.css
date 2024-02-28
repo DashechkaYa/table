@@ -79,14 +79,8 @@ body {
   text-align: right;
 }
 
-/* .table__align--left {
-  text-align: left;
-  padding: 15px 0;
-} */
-
 td:nth-child(3) {
   text-align: left;
-  /* padding: 15px 0; */
 }
 
 td:nth-child(4) {
@@ -108,7 +102,7 @@ td {
   text-transform: uppercase;
 }
 
-.table__row {
+.tabe__row {
   border-bottom: 1px solid #f0f2f4;
   height: 47px;
 }
